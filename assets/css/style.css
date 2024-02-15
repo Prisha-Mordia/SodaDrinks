@@ -1,0 +1,561 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Product sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  /* overflow-y: hidden; */
+}
+
+body::-webkit-scrollbar {
+  display: none;
+  /* overflow-x: hidden; */
+}
+
+#main {
+  width: 100%;
+  height: 100vh;
+  /* background-color: orangered; */
+}
+
+nav {
+  display: flex;
+  /* background-color: beige; */
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 10vh;
+  position: fixed;
+  z-index: 5;
+}
+
+nav a {
+  color: #fff;
+  font-size: 1.7vw;
+  text-decoration: none;
+}
+
+.cntr-nav {
+  display: flex;
+  gap: 3vw;
+}
+
+nav i {
+  color: #fff;
+  font-size: 1.5vw;
+}
+/* ////////////////FANTA-DRINK///////////////// */
+.one {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(150deg, rgb(255, 166, 0), rgb(255, 94, 0));
+}
+
+.one h1 {
+  font-size: 24vw;
+  letter-spacing: 1vw;
+  font-family: Product Sans B;
+  color: #fff;
+}
+
+#fanta {
+  position: absolute;
+  width: 38%;
+  bottom: 17%;
+  z-index: 2;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+
+#orange-cut {
+  position: absolute;
+  width: 15%;
+  top: 10%;
+  left: 36%;
+  z-index: 1;
+}
+
+#orange {
+  position: absolute;
+  width: 16%;
+  z-index: 3;
+  bottom: 7%;
+  right: 30%;
+}
+
+#leaf {
+  top: 10%;
+  left: 0%;
+  transform: rotate(60deg);
+  position: absolute;
+  width: 18%;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+  /* z-index: 500000; */
+}
+
+#leaf2 {
+  top: 70%;
+  left: 80%;
+  transform: rotate(-90deg);
+  position: absolute;
+  width: 12%;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+
+#leaf3 {
+  position: absolute;
+  width: 20%;
+  top: 10%;
+  right: 0%;
+}
+
+.two {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 107vh;
+  background: #4d231c;
+}
+
+.lft-two,
+.rgt-two {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5vh;
+  width: 50%;
+  height: 100%;
+}
+
+.lft-two svg {
+  margin-top: 50vh;
+  width: 90%;
+  transform: rotateX(40deg);
+  /* z-index: -1; */
+}
+
+.rgt-two h1 {
+  color: #fff;
+  font-size: 5vw;
+}
+
+.rgt-two p {
+  font-size: 1vw;
+  color: #fff;
+  width: 80%;
+  line-height: 3vh;
+}
+
+.three {
+  /* position: relative; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5vw;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(150deg, rgb(255, 166, 0), rgb(255, 94, 0));
+}
+
+.card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2vh;
+  width: 25vw;
+  height: 70vh;
+  margin-top: 20vh;
+  border-radius: 20px;
+  background-color: #fff;
+}
+
+.card h1 {
+  margin-top: 40vh;
+  font-size: 3vw;
+}
+
+.card button {
+  font-size: 1vw;
+  border-radius: 50px;
+  border: none;
+  color: #fff;
+  background-color: rgb(255, 149, 0);
+  padding: 1vw 2vw;
+  transition: background-color 0.1s ease, box-shadow 0.1s ease 0.1s;
+}
+
+.card button:hover {
+  background-color: rgb(255, 149, 0);
+  box-shadow: 0 0 20px rgb(255, 149, 0);
+}
+
+#cocacola {
+  top: -15%;
+  position: absolute;
+  width: 55%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+
+#pepsi {
+  top: -13%;
+  position: absolute;
+  width: 61%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+
+.lemon {
+  top: -37%;
+  position: absolute;
+  left: 50%;
+  width: 24vw;
+  transform: translate(-50%, 0%);
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+
+#icecubes {
+  top: -25%;
+  position: absolute;
+  left: 55%;
+  width: 25vw;
+  transform: translate(-50%, 0%);
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+
+/* ////////////////SPRITE-DRINK///////////////// */
+
+.one-sprite {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(150deg, rgb(145, 98, 11), rgb(75, 126, 81));
+}
+
+#sprite {
+  position: absolute;
+  width: 18%;
+  bottom: 17%;
+  z-index: 2;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+
+.one-sprite h1 {
+  font-size: 24vw;
+  letter-spacing: 1vw;
+  font-family: Product Sans B;
+  color: #fff;
+}
+
+#lemon-cut {
+  position: absolute;
+  width: 22%;
+  top: 4%;
+  left: 32%;
+  z-index: 1;
+}
+
+#lemon {
+  position: absolute;
+  width: 18%;
+  z-index: 3;
+  bottom: 6%;
+  right: 30%;
+}
+
+.three-sprite {
+  /* position: relative; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5vw;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(150deg, rgb(145, 98, 11), rgb(75, 126, 81));
+}
+
+.peaches {
+  top: -34%;
+  position: absolute;
+  left: 50%;
+  width: 19vw;
+  transform: translate(-50%, 0%);
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+
+#lipton {
+  top: -25%;
+  position: absolute;
+  width: 94%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+
+.cherry {
+  top: -25%;
+  position: absolute;
+  left: 45%;
+  width: 21vw;
+  transform: translate(-50%, 0%);
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+
+#pepsi1 {
+  top: -16%;
+  position: absolute;
+  width: 109%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+
+/* ////////////////cocacola-DRINK///////////////// */
+.one-coca h1 {
+  font-size: 16vw;
+  /* letter-spacing: 1vw; */
+  font-family: Product Sans B;
+  color: #fff;
+}
+
+.one-coca {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(150deg, rgb(214, 183, 183), rgb(222, 31, 31));
+}
+
+#cocacola1 {
+  position: absolute;
+  width: 17.5%;
+  bottom: 10%;
+  z-index: 2;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+
+#ball {
+  position: absolute;
+  width: 32%;
+  top: -10%;
+  left: 12%;
+  z-index: 1;
+}
+
+#ice {
+  position: absolute;
+  width: 19%;
+  z-index: 3;
+  bottom: 7%;
+  right: 29%;
+}
+
+#rio {
+  top: -15%;
+  position: absolute;
+  width: 95%;
+  height: 80%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+
+.mango {
+  top: -35%;
+  position: absolute;
+  left: -15%;
+  width: 29vw;
+  transform: translate(-50%, 0%);
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+  transform: rotate(-20deg);
+}
+.three-coca {
+  /* position: relative; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5vw;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(150deg, rgb(214, 183, 183), rgb(222, 31, 31));
+}
+
+.lft-two img {
+  position: absolute;
+  /* top: 36%; */
+  margin-top: -52vh;
+  width: 16%;
+  left: 18.5%;
+  transform: rotateX(-40deg);
+  /* z-index: -1; */
+}
+
+/* ////////////////rio-DRINK///////////////// */
+.one-rio h1 {
+  font-size: 24vw;
+  letter-spacing: 3vw;
+  font-family: Product Sans B;
+  color: #fff;
+}
+
+.one-rio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    150deg,
+    rgb(133, 55, 189),
+    rgb(194, 212, 79),
+    rgb(94, 148, 47)
+  );
+}
+
+#rio1 {
+  position: absolute;
+  width: 24%;
+  height: 57%;
+  bottom: 21%;
+  left: 35%;
+  z-index: 2;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+
+#rawmango1 {
+  position: absolute;
+  width: 25%;
+  z-index: 3;
+  bottom: 7%;
+  right: 29%;
+}
+#smiley {
+  position: absolute;
+  width: 26%;
+  top: -0%;
+  left: 12%;
+  z-index: 1;
+}
+
+#smiley1 {
+  position: absolute;
+  width: 8%;
+  top: 83%;
+  left: 38%;
+  z-index: 1;
+}
+#smiley2 {
+  position: absolute;
+  width: 17%;
+  top: 40%;
+  left: 75%;
+  z-index: 1;
+}
+/* Add the following CSS for the "smiley" element */
+#smiley {
+  position: absolute;
+  animation: moveCircular 5s linear infinite;
+}
+/* Define the keyframes for the circular motion */
+@keyframes moveCircular {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateX(0) rotate(90deg);
+  }
+  50% {
+    transform: translateX(0) rotate(180deg);
+  }
+  75% {
+    transform: translateX(0) rotate(270deg);
+  }
+  100% {
+    transform: translateX(0) rotate(360deg);
+  }
+}
+/* Add the following CSS for the "smiley1" element */
+#smiley1 {
+  position: absolute;
+  animation: moveCircularRightToLeft 5s linear infinite;
+}
+#smiley2,
+#smile {
+  position: absolute;
+  animation: moveCircularRightToLeft 6s linear infinite;
+}
+/* Define the keyframes for the circular motion from right to left */
+@keyframes moveCircularRightToLeft {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateX(0) rotate(-90deg);
+  }
+  50% {
+    transform: translateX(0) rotate(-180deg);
+  }
+  75% {
+    transform: translateX(0) rotate(-270deg);
+  }
+  100% {
+    transform: translateX(0) rotate(-360deg);
+  }
+}
+.three-rio {
+  /* position: relative; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5vw;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    150deg,
+    rgb(133, 55, 189),
+    rgb(194, 212, 79),
+    rgb(94, 148, 47)
+  );
+}
+#smile {
+  width: 50%;
+  height: 30%;
+  left: 4%;
+  bottom: -40%;
+  z-index: 1;
+}
+.orangecircle {
+  top: -30%;
+  position: absolute;
+  left: 50%;
+  width: 16vw;
+  transform: translate(-50%, 0%);
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+
+#fanta1 {
+  top: -12%;
+  position: absolute;
+  width: 134%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+
+/* //////confetti/////// */
